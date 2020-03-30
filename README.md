@@ -856,7 +856,7 @@ const numbers = ["1111", "2222"];
 const customerOrderId = "customerOrderId"
 
 try {
-  const importTnOrder = await RemoveImportedTnOrder.createAsync(numbers, customerOrderId);
+  const importTnOrder = await RemoveImportedTnOrder.createAsync(customerOrderId, numbers);
   console.log(importTnOrder);
 }
 catch (e) {
