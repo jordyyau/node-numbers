@@ -15,6 +15,10 @@ export async function xmlDeserialize(
   rootName: string,
   xmlString: string
 ): Promise<any> {
-  const parser = new Parser({ rootName, explicitArray: false });
+  const parser = new Parser({
+      explicitRoot: true,
+      explicitArray: false
+  });
+
   return (await parser.parseStringPromise(xmlString))[rootName];
 }

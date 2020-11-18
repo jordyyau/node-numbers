@@ -8661,22 +8661,6 @@ export class ExternalController extends BaseController {
     );
   }
 
-  /**
-   * A PUT on the filename will update / replace the identified file id.  The format of the PUT is
-   * identical to that of the POST.<br>Header settings typical of a valid upload are...<br><code>Host:
-   * api.inetwork.com <br>Authorization: Basic xxxxxxxxxxxxxxxxxxxx== <br>Content-Type: application/pdf
-   * <br>Accept: */* <br>Accept-Encoding: gzip, deflate <br>Accept-Language: en-US,en;q=0.8 <br>Cache-
-   * Control: no-cache <br>    <br>----WebKitFormBoundaryE19zNvXGzXaLvS5C <br>Content-Disposition: form-
-   * data; name="george"; filename="Bandwidth Dashboard.pdf" <br>Content-Type: application/pdf <br>
-   * <br>    <br>----WebKitFormBoundaryE19zNvXGzXaLvS5C <br></code>
-   *
-   * @param accountId
-   * @param orderType
-   * @param orderId
-   * @param fileName
-   * @param body
-   * @return Response from the API call
-   */
   async updateFileDirect(
     accountId: number,
     orderType: string,
@@ -8732,7 +8716,7 @@ export class ExternalController extends BaseController {
    * POSTing to the /loas resource will enable the upload of the file.  The key attribute to the POST is
    * ensuring that the headers are correctly set to support the file upload.<br>    <br>Header settings
    * typical of a valid upload are...<br>    <br><code>Host: api.inetwork.com <br>Authorization: Basic
-   * xxxxxxxxxxxxxxxxxxxx== <br>Content-Type: application/pdf <br>Accept: */* <br>Accept-Encoding: gzip,
+   * xxxxxxxxxxxxxxxxxxxx== <br>Content-Type: application/pdf <br>Accept:  <br>Accept-Encoding: gzip,
    * deflate <br>Accept-Language: en-US,en;q=0.8 <br>Cache-Control: no-cache <br>    <br>----
    * WebKitFormBoundaryE19zNvXGzXaLvS5C <br>Content-Disposition: form-data; name="george";
    * filename="Bandwidth Dashboard.pdf" <br>Content-Type: application/pdf <br>    <br>    <br>----
